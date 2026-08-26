@@ -506,5 +506,54 @@
     "tone": "casual",
     "watch_for": "The English 'thats' must not surface as a demonstrative topic pointing at a person — それが／あれが一番でかい日本人だ(わ) reads like describing an object and is the failure, as is dropping the 'i seen' experience nuance. Natural casual drops the demonstrative and restructures: 今まで(見た中)で一番でかい日本人だな or こんなでかい日本人見たことない.",
     "regression_of": "mined from production 2026-08-06"
+  },
+  {
+    "id": "jp-en-nanka-filler-not-or-something",
+    "input": "なんかラウンジつきで快適だった",
+    "tone": "casual",
+    "watch_for": "Sentence-initial なんか is a vague spoken filler ('like / kinda'), not doubt about the noun. Rendering it as 'a lounge or something' — as if unsure there was a lounge — is the failure. Natural: 'It was pretty comfy, it had a lounge and stuff' / 'It was nice, it had like a lounge and everything.'",
+    "regression_of": "mined from production 2026-08-14"
+  },
+  {
+    "id": "overtime-then-gym-no-invented-sequence",
+    "input": "just did overtime and now at the gym next to my baito lol",
+    "tone": "casual",
+    "watch_for": "Two facts joined by 'and now' stay two facts: overtime is done, the speaker is now at the gym beside their part-time job. Inventing an event or link the source doesn't state — バイト終わりに残業して (overtime after a shift that never ended in the source) — or naming バイト twice is the failure. Natural: 残業終わってそのままバイト先の隣のジム来た笑 / 残業終わって今バイト先の隣のジムにいる笑.",
+    "regression_of": "mined from production 2026-08-15"
+  },
+  {
+    "id": "lily-katakana-not-kanji",
+    "input": "lily knocked over the mirror",
+    "tone": "casual",
+    "watch_for": "The foreign name must be katakana — リリー(ちゃん)が鏡倒しちゃった. A Chinese-style kanji rendering 莉莉 is the failure (a lapse of the foreign-name-katakana rule on a lowercase everyday English name). The dropped を is normal casual and must not count against it.",
+    "regression_of": "mined from production 2026-08-22"
+  },
+  {
+    "id": "sweatpants-single-hedge",
+    "input": "it looks like sweat pants or smth",
+    "tone": "casual",
+    "watch_for": "One uncertainty gets one hedge in a single spoken line — スウェット(パンツ)か何かっぽい／スウェットっぽいな. Stacking っぽい with a second hedge tail (…っぽいな、何かそんな感じ) or bolting two fragments together is the failure.",
+    "regression_of": "mined from production 2026-08-23"
+  },
+  {
+    "id": "shy-na-adjective-not-shizukai",
+    "input": "i thought she was shy but shes actually crazy cat",
+    "tone": "casual",
+    "watch_for": "A な-adjective inflected like an い-adjective (静かい) is a hard failure. 'Shy' is シャイ／人見知り／恥ずかしがり, not 静か (quiet). The trailing 'cat' is a stray token — dropping it is fine. Natural: シャイだと思ってたけど実はやばいやつだった / 人見知りかと思ったら実はやばかった.",
+    "regression_of": "mined from production 2026-08-23"
+  },
+  {
+    "id": "jp-en-no-wrapping-quotes-damasareru",
+    "input": "おんなの子にも騙されちゃうよ！",
+    "tone": "casual",
+    "watch_for": "The translation must be the bare line — wrapping it in quotation marks (“You're gonna …!”) is an output-format failure. Keep も as 'even/too' ('You'd get fooled by a girl too!' / 'Even a girl could fool you!') without a tacked-on 'you know'.",
+    "regression_of": "mined from production 2026-08-25"
+  },
+  {
+    "id": "jp-en-shika-passive-agent",
+    "input": "lilyちゃんにしか騙されないよ",
+    "tone": "casual",
+    "watch_for": "Xにしか騙されない names X as the only one who can fool the speaker: 'Only Lily can fool me' / 'I only get fooled by Lily' / 'Nobody but Lily can fool me'. Turning it into a conditional about an unstated 'it' ('I'd only fall for it if it were Lily') is the failure. The embedded 'lily' stays 'Lily'.",
+    "regression_of": "mined from production 2026-08-25"
   }
 ]
